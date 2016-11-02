@@ -5,7 +5,7 @@ conn = sqlite3.connect('sms.db')
 c = conn.cursor()
 c.execute('create table if not exists sms (id integer primary key asc, timestamp text, body text, author text, author_number text, recipient text, recipient_number text)')
 
-with open('sms1.xml') as f:
+with open('sms4.xml') as f:
     soup = BeautifulSoup(f.read(), 'xml')
 
 dups = 0
